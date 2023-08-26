@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, sans-serif;
+    /*border: 2px solid red*/
+}
+
+body,
+.container {
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr/1fr 6fr;
+}
+
+.sidebar {
+    background-color: #10a1e4e1;
+
+}
+
+.main-content-container {
+    background-color: #e5e7eb;
+    display: grid;
+    grid-template: 1fr 3fr / 1fr;
+}
+
+.header {
+    background-color: white;
+    box-shadow: 3px 1px 20px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
+    gap: 20px;
+}
+
+.header-row-1 {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.search-icon {
+    height: 24px;
+    width: 24px;
+}
