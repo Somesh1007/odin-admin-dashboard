@@ -7,8 +7,10 @@
 }
 
 :root {
-    --light-grey: #e5e7eb;
-    --light-blue: #10a1e4e1
+    --light-grey: #E2E8F0;
+    --light-blue: #10a1e4e1;
+    --grey-text-color: #78716c;
+    --shadow-bottom: 3px 1px 20px 8px rgba(0, 0, 0, 0.1)
 }
 
 body,
@@ -92,19 +94,15 @@ a:active {
     font-size: 1.7rem;
 }
 
-.main-content-container {
-    background-color: var(--light-grey);
-    display: grid;
-    grid-template: 200px 1fr / 1fr;
-}
+
 
 .header {
     background-color: white;
-    box-shadow: 3px 1px 20px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-bottom);
     display: grid;
     grid-template: 1fr 1.5fr / 1fr;
-    gap: 15px;
-    padding: 15px 60px 15px 40px;
+    gap: 10px;
+    padding: 10px 60px 10px 40px;
 
 }
 
@@ -144,11 +142,11 @@ a:active {
 
 .header-row-1>.left>input#search {
     border: 0px;
-    padding: 5px;
+    padding: 15px;
     border-radius: 20px;
     background-color: var(--light-grey);
-    height: 30px;
-    flex-grow: 0.8;
+    height: 35px;
+    flex-grow: 0.5;
     color: black;
     font-size: 1rem;
 }
@@ -178,4 +176,145 @@ a:active {
     font-size: 1rem;
     border-radius: 20px;
     padding: 10px 30px;
+}
+
+.main-content-container {
+    background-color: var(--light-grey);
+    display: grid;
+    /*grid-template: 200px 1fr / 1fr;*/
+    grid-template: 1fr 5fr / 1fr;
+}
+
+.main-content {
+    padding: 30px;
+    display: grid;
+    grid-template: 1fr / 3fr 1fr;
+    gap: 25px;
+}
+
+.main-content .projects-header,
+.announcements .announcements-section-1 .announcement-header,
+.announcements .announcements-section-2 .trending-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-content .card .card-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.main-content .projects-container {
+    display: grid;
+    /*grid-template: repeat(3, 200px) / repeat(2, 450px);*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 30px;
+}
+
+.main-content .projects-container .card {
+    padding: 20px 20px 20px 15px;
+    background-color: white;
+    box-shadow: var(--shadow-bottom);
+    border-radius: 10px;
+    border-left: 10px solid orange;
+    display: grid;
+    align-items: center;
+}
+
+.main-content .projects-container .card .project-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.main-content .projects-container .card .project-description {
+    color: var(--grey-text-color);
+    align-self: start;
+}
+
+.main-content .projects-container .card .icons-list {
+    justify-self: end;
+    align-self: end;
+}
+
+.main-content .projects-container .card .icons-list img {
+    margin-left: 20px;
+}
+
+.announcements {
+    display: grid;
+    grid-template: 400px 400px / 330px;
+    gap: 50px;
+}
+
+.announcements-section-1-container {
+    padding: 40px 40px 20px 35px;
+
+}
+
+.announcements-section-1-container,
+.announcements-section-2-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-bottom);
+}
+
+.announcements-section-1-container {
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr;
+}
+
+.announcements-section-1-container .announcement-main-line {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.announcements-section-1-container .announcement-content {
+    font-size: 0.9rem;
+    color: var(--grey-text-color);
+    margin-bottom: 5px;
+    /*border-bottom: 1px solid var(--grey-text-color);*/
+}
+
+.trending-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+.announcements-section-2-container {
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.announcement-2,
+.announcement-3 {
+    margin-top: 20px;
+    border-top: 1px solid #e7e5e4;
+    /*margin-bottom: 20px;*/
+
+}
+
+.announcement-2 .announcement-main-line,
+.announcement-3 .announcement-main-line {
+    margin-top: 20px;
+
+}
+
+.announcements-section-2-container .trending-entry {
+    display: flex;
+    align-items: center;
+}
+
+.trending-entry img {
+    margin-right: 20px;
+}
+
+.trending-entry .trending-quote {
+    color: var(--grey-text-color);
 }
